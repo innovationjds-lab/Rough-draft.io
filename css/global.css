@@ -1,3 +1,4 @@
+/* ================= GLOBAL ================= */
 :root {
     --green: #6FAF98;
     --light-blue: #A7C7E7;
@@ -33,11 +34,7 @@ body {
     margin: auto;
 }
 
-section {
-    padding: 120px 0;
-}
-
-h1, h2, h3 {
+h1,h2,h3 {
     font-weight: 600;
 }
 
@@ -57,9 +54,23 @@ p {
     font-weight: 600;
     transition: var(--transition);
     box-shadow: var(--shadow-soft);
+    cursor: pointer;
 }
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.02);
+    animation: bounce 0.6s;
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* BOUNCE ANIMATION */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+/* GLOW CLASS (for hero text or buttons) */
+.glow {
+    text-shadow: 0 0 8px var(--light-blue), 0 0 20px var(--green);
 }
