@@ -3,104 +3,171 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Company | Official Site</title>
+    <title>Your Company | Boho Digital Experience</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Google Fonts (Optional) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ================= NAV ================= -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">YourCompany</div>
+<!-- NAV -->
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">YourCompany</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Rooted in Nature. Built for Growth.</h1>
+        <p>Boho-inspired digital experiences that feel organic and powerful.</p>
+        <button class="btn-primary">Start Your Journey</button>
+    </div>
+</section>
 
-            <div class="menu-toggle" id="menu-toggle">
-                ☰
+<!-- BRAND STORY -->
+<section id="story" class="section">
+    <div class="container split">
+        <div class="text-content">
+            <h2>Our Story</h2>
+            <p>
+                We believe brands should breathe. Inspired by nature,
+                movement, and emotion, we create spaces online that feel alive.
+            </p>
+            <p>
+                Every project blends artistry with performance —
+                balancing beauty and strategy.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="assets/images/story.jpg" alt="Brand Story">
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section alt-bg">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="card-grid">
+
+            <div class="card large">
+                <img src="assets/images/service1.jpg" alt="">
+                <h3>Web Experiences</h3>
+                <p>Custom, immersive websites with organic flow.</p>
+            </div>
+
+            <div class="card large">
+                <img src="assets/images/service2.jpg" alt="">
+                <h3>Brand Identity</h3>
+                <p>Logos, colors, typography rooted in natural elegance.</p>
+            </div>
+
+            <div class="card large">
+                <img src="assets/images/service3.jpg" alt="">
+                <h3>Digital Marketing</h3>
+                <p>Growth strategies designed to scale sustainably.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+    <div class="container">
+        <h2>Our Work</h2>
+
+        <div class="gallery">
+            <img src="assets/images/work1.jpg">
+            <img src="assets/images/work2.jpg">
+            <img src="assets/images/work3.jpg">
+            <img src="assets/images/work4.jpg">
+            <img src="assets/images/work5.jpg">
+            <img src="assets/images/work6.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- LOGO STRIP -->
+<section class="logo-strip">
+    <div class="container logos">
+        <img src="assets/images/logo1.png">
+        <img src="assets/images/logo2.png">
+        <img src="assets/images/logo3.png">
+        <img src="assets/images/logo4.png">
+        <img src="assets/images/logo5.png">
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section alt-bg">
+    <div class="container">
+        <h2>What Clients Say</h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <img src="assets/images/client1.jpg">
+                <p>"Beautiful execution and seamless delivery."</p>
+                <h4>- Creative Founder</h4>
+            </div>
+
+            <div class="testimonial">
+                <img src="assets/images/client2.jpg">
+                <p>"The perfect balance of aesthetic and performance."</p>
+                <h4>- Brand Owner</h4>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- ================= HERO ================= -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>We Create Powerful Digital Experiences</h1>
-            <p>Modern. Clean. Scalable.</p>
-            <button class="btn-primary">Get Started</button>
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="container split">
+        <div class="text-content">
+            <h2>Let’s Create Together</h2>
+            <p>Reach out and let’s bring your vision to life.</p>
         </div>
-    </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We build brands and businesses with strategy and innovation.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button class="btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div>
+            <h3>YourCompany</h3>
+            <p>Rooted in creativity. Built for impact.</p>
         </div>
-    </section>
 
-    <!-- ================= SERVICES ================= -->
-    <section id="services" class="section alt-bg">
-        <div class="container">
-            <h2>Our Services</h2>
-
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Web Development</h3>
-                    <p>Custom websites built for growth.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Brand Strategy</h3>
-                    <p>Clarity, direction, and positioning.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Marketing</h3>
-                    <p>Performance-driven campaigns.</p>
-                </div>
-            </div>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">LinkedIn</a>
         </div>
-    </section>
+    </div>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
+    <div class="footer-bottom">
+        © 2026 Your Company. All Rights Reserved.
+    </div>
+</footer>
 
-            <form class="contact-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <p>© 2026 Your Company. All Rights Reserved.</p>
-
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="js/script.js"></script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
