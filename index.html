@@ -1,178 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Setup -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Company | Official Site</title>
 
-    <!-- SEO -->
-    <title>Your Company Name | Official Website</title>
-    <meta name="description" content="Your Company Name - Professional services built for excellence.">
-    <meta name="keywords" content="business, services, ecommerce, professional">
-    <meta name="author" content="Your Company Name">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Open Graph (Social Sharing) -->
-    <meta property="og:title" content="Your Company Name">
-    <meta property="og:description" content="Professional services built for excellence.">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">
-
-    <!-- Future CSS -->
-    <link rel="stylesheet" href="styles.css">
-
+    <!-- Google Fonts (Optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h2>YourCompany</h2>
-            </div>
+    <!-- ================= NAV ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">YourCompany</div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <div class="cta-button">
-                <a href="#contact">Get Started</a>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- ================= HERO ================= -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>We Build Solutions That Drive Results</h1>
-            <p>Helping businesses grow through innovation, strategy, and execution.</p>
-            <a href="#services" class="btn-primary">Explore Services</a>
+        <div class="container hero-content">
+            <h1>We Create Powerful Digital Experiences</h1>
+            <p>Modern. Clean. Scalable.</p>
+            <button class="btn-primary">Get Started</button>
         </div>
     </section>
 
-    <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" class="about">
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
         <div class="container">
             <h2>About Us</h2>
-            <p>
-                Your Company is dedicated to delivering high-quality services with integrity,
-                innovation, and excellence. Our mission is to empower clients with
-                strategies that scale and sustain growth.
-            </p>
+            <p>We build brands and businesses with strategy and innovation.</p>
         </div>
     </section>
 
-    <!-- ================= SERVICES SECTION ================= -->
-    <section id="services" class="services">
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section alt-bg">
         <div class="container">
             <h2>Our Services</h2>
 
-            <div class="service-grid">
-
-                <div class="service-card">
-                    <h3>Service One</h3>
-                    <p>High-quality solutions tailored to your business needs.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Custom websites built for growth.</p>
                 </div>
 
-                <div class="service-card">
-                    <h3>Service Two</h3>
-                    <p>Strategic planning and execution for sustainable growth.</p>
+                <div class="card">
+                    <h3>Brand Strategy</h3>
+                    <p>Clarity, direction, and positioning.</p>
                 </div>
 
-                <div class="service-card">
-                    <h3>Service Three</h3>
-                    <p>Expert support and optimization to maximize performance.</p>
+                <div class="card">
+                    <h3>Marketing</h3>
+                    <p>Performance-driven campaigns.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ================= TESTIMONIALS ================= -->
-    <section id="testimonials" class="testimonials">
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
         <div class="container">
-            <h2>What Clients Say</h2>
+            <h2>Contact</h2>
 
-            <div class="testimonial">
-                <p>"This company transformed our business. Highly recommended!"</p>
-                <h4>- Happy Client</h4>
-            </div>
-
-            <div class="testimonial">
-                <p>"Professional, reliable, and results-driven."</p>
-                <h4>- Business Owner</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= CONTACT SECTION ================= -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-
-            <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-                
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
             </form>
-
-            <div class="contact-info">
-                <p>Email: youremail@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Location: Your City, State</p>
-            </div>
         </div>
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2026 Your Company. All Rights Reserved.</p>
 
-            <div class="footer-brand">
-                <h3>YourCompany</h3>
-                <p>Building excellence, delivering results.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
             </div>
-
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com" target="_blank">Facebook</a><br>
-                <a href="https://instagram.com" target="_blank">Instagram</a><br>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
-                <a href="https://twitter.com" target="_blank">Twitter</a>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Your Company Name. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Future JavaScript -->
-    <script src="script.js"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
