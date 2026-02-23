@@ -2,41 +2,108 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+
+    /* Multi-layer colorful gradients for boho pop */
     background:
-        radial-gradient(circle at top right, var(--light-blue), transparent 60%),
-        radial-gradient(circle at bottom left, var(--green), transparent 55%);
+        radial-gradient(circle at 20% 20%, rgba(167,199,231,0.35), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(111,175,152,0.35), transparent 50%),
+        linear-gradient(135deg, #f7f5ef, #e0f2f1);
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 700px;
     text-align: center;
+    padding: 0 20px;
+    z-index: 10;
 }
 
 .hero h1 {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    margin-bottom: 25px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    margin-bottom: clamp(20px, 3vw, 40px);
+    color: #1F3C5B;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(111,175,152,0.5), 0 0 20px rgba(167,199,231,0.3);
 }
 
 .hero p {
-    font-size: 1.15rem;
-    margin-bottom: 40px;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: clamp(30px, 5vw, 50px);
+    color: #102538;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+/* Hero Buttons */
+.hero .btn-primary {
+    padding: clamp(12px, 2vw, 20px) clamp(25px, 4vw, 40px);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    box-shadow: 0 0 15px rgba(111,175,152,0.5), 0 0 25px rgba(167,199,231,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 25px rgba(111,175,152,0.8), 0 0 35px rgba(167,199,231,0.5);
 }
 
 /* FLOATING BUBBLES */
 .bubble {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, var(--light-blue) 0%, transparent 70%);
-    width: 40px;
-    height: 40px;
-    animation: floatBubble 8s infinite;
-    opacity: 0.4;
+    background: radial-gradient(circle, var(--light-blue) 0%, var(--green) 50%, transparent 80%);
+    width: calc(20px + 3vw);
+    height: calc(20px + 3vw);
+    animation: floatBubble 10s ease-in-out infinite;
+    opacity: 0.3;
+    z-index: 5;
 }
 
+/* Random rotation and horizontal movement for depth */
 @keyframes floatBubble {
-    0% {transform: translateY(100vh) scale(0.5);}
-    50% {transform: translateY(50vh) scale(1);}
-    100% {transform: translateY(-20vh) scale(0.5);}
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.5);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-20vh) rotate(360deg) scale(0.5);
+        opacity: 0.2;
+    }
+}
+
+/* RESPONSIVE HERO FOR SMALL SCREENS */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .hero p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+
+    .hero .btn-primary {
+        padding: clamp(10px, 3vw, 16px) clamp(20px, 5vw, 30px);
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: clamp(1.8rem, 9vw, 2.8rem);
+    }
+
+    .hero p {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+    }
+
+    .hero .btn-primary {
+        padding: clamp(8px, 4vw, 14px) clamp(15px, 5vw, 24px);
+        font-size: clamp(0.75rem, 3.5vw, 0.95rem);
+    }
 }
