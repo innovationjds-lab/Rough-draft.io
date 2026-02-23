@@ -1,1 +1,80 @@
-1
+.section {
+    background: #fff;
+}
+
+.section h2 {
+    font-size: 2.6rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    padding: 40px;
+    background: linear-gradient(180deg, #ffffff, var(--cream));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* PORTFOLIO */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    height: 280px;
+    background: linear-gradient(135deg, var(--green), var(--light-blue));
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item::after {
+    content: "View Project";
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 60, 91, 0.85);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover::after {
+    opacity: 1;
+}
+
+/* CONTACT */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: none;
+}
